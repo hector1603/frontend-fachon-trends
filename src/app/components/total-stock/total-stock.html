@@ -4,7 +4,7 @@
   <div class="card">
     <h4>Stock Total por Sucursal:</h4>
     <ul>
-      <li *ngFor="let branch of Object.keys(totalStockPerBranch)">
+      <li *ngFor="let branch of getKeys(totalStockPerBranch)">
         <strong>{{ branch | titlecase }}:</strong> {{ totalStockPerBranch[branch] }}
       </li>
     </ul>
