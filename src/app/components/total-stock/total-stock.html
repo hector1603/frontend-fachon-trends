@@ -1,0 +1,17 @@
+<div class="total-summary">
+  <h3>Resumen del Stock Total</h3>
+
+  <div class="card">
+    <h4>Stock Total por Sucursal:</h4>
+    <ul>
+      <li *ngFor="let branch of Object.keys(totalStockPerBranch)">
+        <strong>{{ branch | titlecase }}:</strong> {{ totalStockPerBranch[branch] }}
+      </li>
+    </ul>
+  </div>
+  
+  <div class="total-global-box">
+    <h4>Suma Total del Inventario:</h4>
+    <p class="total-global-value">{{ totalGlobalStock }}</p>
+  </div>
+</div>
